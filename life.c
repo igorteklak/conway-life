@@ -20,7 +20,7 @@ int count_alive(int field[HEIGHT][WIDTH], int row, int col)
 void evolve(int field[HEIGHT][WIDTH])
 {
 	int next[HEIGHT][WIDTH];
-	for (int r = 0; r < WIDTH; r++) {
+	for (int r = 0; r < HEIGHT; r++) {
 		for (int c = 0; c < WIDTH; c++) {
 			int n = count_alive(field, r, c);
 			next[r][c] = ( n == 3 || (n == 2 && field[r][c]))  ? 1 : 0;
